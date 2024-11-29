@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ygt\\source\\repos\\XPLAYS!\\BLL\\BLL.csproj": {}
+    "C:\\Users\\ygt\\Documents\\GitHub\\Repos\\XPLAY\\XPLAYS!\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ygt\\source\\repos\\XPLAYS!\\BLL\\BLL.csproj": {
+    "C:\\Users\\ygt\\Documents\\GitHub\\Repos\\XPLAY\\XPLAYS!\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ygt\\source\\repos\\XPLAYS!\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\ygt\\Documents\\GitHub\\Repos\\XPLAY\\XPLAYS!\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\ygt\\source\\repos\\XPLAYS!\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\ygt\\Documents\\GitHub\\Repos\\XPLAY\\XPLAYS!\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\ygt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ygt\\source\\repos\\XPLAYS!\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\ygt\\Documents\\GitHub\\Repos\\XPLAY\\XPLAYS!\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ygt\\AppData\\Roaming\\NuGet\\NuGet.Config",
