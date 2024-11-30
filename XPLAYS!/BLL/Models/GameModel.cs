@@ -9,8 +9,8 @@ namespace BLL.Models
 {
     public class GameModel
     {
-        public Game Record { get; set; }
-        public string Name => Record.Name;
+        public Game GameInfo { get; set; }
+        public string Name => GameInfo.Name;
 
         ////////////
         public List<Publisher> publishers;

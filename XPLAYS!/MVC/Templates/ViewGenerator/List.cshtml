@@ -61,7 +61,7 @@
             @:</div>
             @:<div class="row mb-3">
                 @:<div class="col-10 text-success">
-                    @:@@Model.Count() record(s) found.
+                    @:@@Model.Count() GameInfo(s) found.
                 @:</div>
                 @:<div class="col-2 text-end">
                     @:<a asp-action="Create">Create</a>
@@ -115,17 +115,17 @@
 				        if (pkName != null)
 				        {
 					        @:<td class="text-end w-25">
-						        @:<a asp-action="Details" asp-route-id="@@item.Record.@pkName">Details</a>&nbsp;|&nbsp;
-						        @:<a asp-action="Edit" asp-route-id="@@item.Record.@pkName">Edit</a>&nbsp;|&nbsp;
-						        @:<a asp-action="Delete" asp-route-id="@@item.Record.@pkName">Delete</a>
+						        @:<a asp-action="Details" asp-route-id="@@item.GameInfo.@pkName">Details</a>&nbsp;|&nbsp;
+						        @:<a asp-action="Edit" asp-route-id="@@item.GameInfo.@pkName">Edit</a>&nbsp;|&nbsp;
+						        @:<a asp-action="Delete" asp-route-id="@@item.GameInfo.@pkName">Delete</a>
 					        @:</td>
 				        }
 				        else
 				        {
 					        <td class="text-end w-25">
-						        @@Html.ActionLink("Details", "Details", new { /* id = item.Record.PrimaryKey */ })&nbsp;|&nbsp;
-						        @@Html.ActionLink("Edit", "Edit", new { /* id = item.Record.PrimaryKey */ })&nbsp;|&nbsp;
-						        @@Html.ActionLink("Delete", "Delete", new { /* id = item.Record.PrimaryKey */ })
+						        @@Html.ActionLink("Details", "Details", new { /* id = item.GameInfo.PrimaryKey */ })&nbsp;|&nbsp;
+						        @@Html.ActionLink("Edit", "Edit", new { /* id = item.GameInfo.PrimaryKey */ })&nbsp;|&nbsp;
+						        @@Html.ActionLink("Delete", "Delete", new { /* id = item.GameInfo.PrimaryKey */ })
 					        </td>
 				        }
 				        @:</tr>

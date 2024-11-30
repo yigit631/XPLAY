@@ -28,22 +28,22 @@
     <form asp-action="Edit" autocomplete="off">
 	    @Html.AntiForgeryToken()
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="hidden" asp-for="Record.Id" />
+        <input type="hidden" asp-for="GameInfo.Id" />
         <div class="row mb-3">
             <label asp-for="Name" class="col-2 col-form-label fw-bold"></label>
 	        <div class="col-10">
-	            <input asp-for="Record.Name" class="form-control" />
-		        <span asp-validation-for="Record.Name" class="text-danger"></span>
+	            <input asp-for="GameInfo.Name" class="form-control" />
+		        <span asp-validation-for="GameInfo.Name" class="text-danger"></span>
 	        </div>
         </div>
 
-@* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@
+@* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. *@
         @*
         <div class="row mb-3">
-            <label asp-for="ManyToManyRecordIds" class="col-2 col-form-label fw-bold"></label>
+            <label asp-for="ManyToManyGameInfoIds" class="col-2 col-form-label fw-bold"></label>
 	        <div class="col-10">
-		        <select multiple asp-for="ManyToManyRecordIds" class="form-select" asp-items="ViewBag.ManyToManyRecordIds"></select>
-		        <span asp-validation-for="ManyToManyRecordIds" class="text-danger"></span>
+		        <select multiple asp-for="ManyToManyGameInfoIds" class="form-select" asp-items="ViewBag.ManyToManyGameInfoIds"></select>
+		        <span asp-validation-for="ManyToManyGameInfoIds" class="text-danger"></span>
 	        </div>
         </div>
         *@
@@ -55,7 +55,7 @@
 		        &nbsp;&nbsp;
                 <button type="reset" class="btn btn-outline-primary">Reset</button>
 		        &nbsp;&nbsp;
-                <a asp-action="Delete" asp-route-id="@Model.Record.Id">Delete</a>
+                <a asp-action="Delete" asp-route-id="@Model.GameInfo.Id">Delete</a>
                 &nbsp;&nbsp;
 		        <a asp-action="Index">Back to List</a>
 	        </div>

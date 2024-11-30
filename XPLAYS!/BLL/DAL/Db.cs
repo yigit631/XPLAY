@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BLL.DAL
 {
-    public class Db : DbContext
+    public class dataContext : DbContext
     {
         public DbSet<Game> Games { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
 
-        public Db(DbContextOptions<Db> options) : base(options)
+        public dataContext(DbContextOptions<dataContext> options) : base(options)
         {
         }
     }

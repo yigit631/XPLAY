@@ -39,45 +39,45 @@
         <div class="row mb-3">
             <label asp-for="Name" class="col-2 col-form-label fw-bold"></label>
 			<div class="col-10">
-			    <input asp-for="Record.Name" class="form-control" />
-				<span asp-validation-for="Record.Name" class="text-danger"></span>
+			    <input asp-for="GameInfo.Name" class="form-control" />
+				<span asp-validation-for="GameInfo.Name" class="text-danger"></span>
 			</div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Record.ReleaseDate" class="col-2 col-form-label fw-bold"></label>
+            <label asp-for="GameInfo.ReleaseDate" class="col-2 col-form-label fw-bold"></label>
 			<div class="col-10">
-				<input asp-for="Record.ReleaseDate" class="form-control @dateTimePickerClass" type="text" />
-				<span asp-validation-for="Record.ReleaseDate" class="text-danger"></span>
+				<input asp-for="GameInfo.ReleaseDate" class="form-control @dateTimePickerClass" type="text" />
+				<span asp-validation-for="GameInfo.ReleaseDate" class="text-danger"></span>
 			</div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Record.Price" class="col-2 col-form-label fw-bold"></label>
+            <label asp-for="GameInfo.Price" class="col-2 col-form-label fw-bold"></label>
 			<div class="col-10">
-			    <input asp-for="Record.Price" class="form-control" />
-				<span asp-validation-for="Record.Price" class="text-danger"></span>
+			    <input asp-for="GameInfo.Price" class="form-control" />
+				<span asp-validation-for="GameInfo.Price" class="text-danger"></span>
 			</div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Record.Publisher" class="col-2 col-form-label fw-bold"></label>
+            <label asp-for="GameInfo.Publisher" class="col-2 col-form-label fw-bold"></label>
 			<div class="col-10">
-				<select asp-for="Record.PublisherId" class="form-select" asp-items="ViewBag.PublisherId">
+				<select asp-for="GameInfo.PublisherId" class="form-select" asp-items="ViewBag.PublisherId">
 					<!--option value="">-- Select --</!--option-->
 					<option value="">-- Select --</option>
                     
                     
 
                 </select>
-				<span asp-validation-for="Record.PublisherId" class="text-danger"></span>
+				<span asp-validation-for="GameInfo.PublisherId" class="text-danger"></span>
 			</div>
         </div>
 
-@* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@
+@* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. *@
         @*
         <div class="row mb-3">
-            <label asp-for="ManyToManyRecordIds" class="col-2 col-form-label fw-bold"></label>
+            <label asp-for="ManyToManyGameInfoIds" class="col-2 col-form-label fw-bold"></label>
 	        <div class="col-10">
-		        <select multiple asp-for="ManyToManyRecordIds" class="form-select" asp-items="ViewBag.ManyToManyRecordIds"></select>
-		        <span asp-validation-for="ManyToManyRecordIds" class="text-danger"></span>
+		        <select multiple asp-for="ManyToManyGameInfoIds" class="form-select" asp-items="ViewBag.ManyToManyGameInfoIds"></select>
+		        <span asp-validation-for="ManyToManyGameInfoIds" class="text-danger"></span>
 	        </div>
         </div>
         *@

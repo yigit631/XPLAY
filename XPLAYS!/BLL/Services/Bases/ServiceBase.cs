@@ -12,9 +12,9 @@ namespace BLL.Services.Bases
         public bool IsSuccessful { get; set; }
         public string Message { get; set; } = string.Empty;
 
-        protected readonly Db _db;
+        protected readonly dataContext _db;
 
-        protected ServiceBase(Db db)
+        protected ServiceBase(dataContext db)
         {
             _db = db;
         }

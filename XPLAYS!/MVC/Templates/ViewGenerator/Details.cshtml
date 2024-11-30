@@ -90,14 +90,14 @@ foreach (var item in Model.ModelMetadata.ModelType.GetProperties())
     }
 }
 @:
-@:@@* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@@
+@:@@* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. *@@
     @:@@*
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            <b>@@Html.DisplayNameFor(model => model.ManyToManyRecords)</b>
+            <b>@@Html.DisplayNameFor(model => model.ManyToManyGameInfos)</b>
         </div>
         <div class="col-10">
-            @@Html.Raw(Model.ManyToManyRecords)
+            @@Html.Raw(Model.ManyToManyGameInfos)
         </div>
     </div>
     @:*@@
@@ -108,13 +108,13 @@ foreach (var item in Model.ModelMetadata.ModelType.GetProperties())
 string pkName = GetPrimaryKeyName();
 if (pkName != null)
 {
-    @:<a asp-action="Edit" asp-route-id="@@Model.Record.@pkName">Edit</a>&nbsp;|&nbsp;
-    @:<a asp-action="Delete" asp-route-id="@@Model.Record.@pkName">Delete</a>&nbsp;|&nbsp;
+    @:<a asp-action="Edit" asp-route-id="@@Model.GameInfo.@pkName">Edit</a>&nbsp;|&nbsp;
+    @:<a asp-action="Delete" asp-route-id="@@Model.GameInfo.@pkName">Delete</a>&nbsp;|&nbsp;
     @:<a asp-action="Index">Back to List</a>
 }
 else
 {
-    @:@@Html.ActionLink("Edit", "Edit", new { /* id = Model.Record.PrimaryKey */ })&nbsp;|&nbsp;
+    @:@@Html.ActionLink("Edit", "Edit", new { /* id = Model.GameInfo.PrimaryKey */ })&nbsp;|&nbsp;
     @:<a asp-action="Index">Back to List</a>
 }
 @:</div>

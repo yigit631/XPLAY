@@ -70,10 +70,10 @@ namespace @Model.ControllerNamespace
             if (ModelState.IsValid)
             {
                 // Insert item service logic:
-                var result = @("_" + serviceAbstractName).Create(@(Model.ModelVariable).Record);
+                var result = @("_" + serviceAbstractName).Create(@(Model.ModelVariable).GameInfo);
                 if (result.IsSuccessful)
                 {
-                    //return CreatedAtAction(nameof(Get), new { id = @(Model.ModelVariable).Record.Id }, @(Model.ModelVariable).Record);
+                    //return CreatedAtAction(nameof(Get), new { id = @(Model.ModelVariable).GameInfo.Id }, @(Model.ModelVariable).GameInfo);
                     return Ok(@Model.ModelVariable);
                 }
                 ModelState.AddModelError("@(Model.ModelTypeName + "Post")", result.Message);
@@ -88,7 +88,7 @@ namespace @Model.ControllerNamespace
             if (ModelState.IsValid)
             {
                 // Update item service logic:
-                var result = @("_" + serviceAbstractName).Update(@(Model.ModelVariable).Record);
+                var result = @("_" + serviceAbstractName).Update(@(Model.ModelVariable).GameInfo);
                 if (result.IsSuccessful)
                 {
                     //return NoContent();

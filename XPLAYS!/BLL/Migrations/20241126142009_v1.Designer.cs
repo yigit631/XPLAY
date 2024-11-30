@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BLL.Migrations
 {
-    [DbContext(typeof(Db))]
+    [DbContext(typeof(dataContext))]
     [Migration("20241126142009_v1")]
     partial class v1
     {

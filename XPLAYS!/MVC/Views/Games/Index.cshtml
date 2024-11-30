@@ -33,7 +33,7 @@
             </div>
             <div class="row mb-3">
                 <div class="col-10 text-success">
-                    @Model.Count() record(s) found.
+                    @Model.Count() GameInfo(s) found.
                 </div>
                 <div class="col-2 text-end">
                     <a asp-action="Create">Create</a>
@@ -46,10 +46,10 @@
                             @Html.DisplayNameFor(model => model.Name)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Record.ReleaseDate)
+                            @Html.DisplayNameFor(model => model.GameInfo.ReleaseDate)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Record.Price)
+                            @Html.DisplayNameFor(model => model.GameInfo.Price)
                         </th>
                         <th>
 
@@ -66,20 +66,20 @@
 						        @Html.DisplayFor(modelItem => item.Name)
 					        </td>
 					        <td class="yellow-text">
-						        @Html.DisplayFor(modelItem => item.Record.ReleaseDate)
+						        @Html.DisplayFor(modelItem => item.GameInfo.ReleaseDate)
 					        </td>
 					        <td class="yellow-text">
-						        @Html.DisplayFor(modelItem => item.Record.Price)
+						        @Html.DisplayFor(modelItem => item.GameInfo.Price)
 					        </td>
 					        <td class="yellow-text">
-                                @Html.DisplayFor(modelItem => item.Record.Publisher.Name)
+                                @Html.DisplayFor(modelItem => item.GameInfo.Publisher.Name)
 
                                 
 					        </td>
 					        <td class="text-end w-25">
-						        <a asp-action="Details" asp-route-id="@item.Record.Id">Details</a>&nbsp;|&nbsp;
-						        <a asp-action="Edit" asp-route-id="@item.Record.Id">Edit</a>&nbsp;|&nbsp;
-						        <a asp-action="Delete" asp-route-id="@item.Record.Id">Delete</a>
+						        <a asp-action="Details" asp-route-id="@item.GameInfo.Id">Details</a>&nbsp;|&nbsp;
+						        <a asp-action="Edit" asp-route-id="@item.GameInfo.Id">Edit</a>&nbsp;|&nbsp;
+						        <a asp-action="Delete" asp-route-id="@item.GameInfo.Id">Delete</a>
 					        </td>
 				        </tr>
 		            }

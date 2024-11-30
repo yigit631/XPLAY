@@ -8,7 +8,7 @@ using MVC.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 string connectionString = builder.Configuration.GetConnectionString("Db");
-builder.Services.AddDbContext<Db>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<dataContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IGameService, GameService>();
 builder.Services.AddScoped<IPublisherService, PublisherService>();
 

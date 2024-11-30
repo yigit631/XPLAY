@@ -34,44 +34,44 @@
     </div>
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            @Html.DisplayNameFor(model => model.Record.ReleaseDate)
+            @Html.DisplayNameFor(model => model.GameInfo.ReleaseDate)
         </div>
         <div class="col-10">
-                @Html.DisplayFor(model => model.Record.ReleaseDate)
+                @Html.DisplayFor(model => model.GameInfo.ReleaseDate)
         </div>
     </div>
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            @Html.DisplayNameFor(model => model.Record.Price)
+            @Html.DisplayNameFor(model => model.GameInfo.Price)
         </div>
         <div class="col-10">
-            @Html.DisplayFor(model => model.Record.Price)
+            @Html.DisplayFor(model => model.GameInfo.Price)
         </div>
     </div>
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            @Html.DisplayNameFor(model => model.Record.Publisher)
+            @Html.DisplayNameFor(model => model.GameInfo.Publisher)
         </div>
         <div class="col-10">
-            @Html.DisplayFor(model => model.Record.Publisher)
+            @Html.DisplayFor(model => model.GameInfo.Publisher)
         </div>
     </div>
 
-@* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@
+@* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. *@
     @*
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            <b>@Html.DisplayNameFor(model => model.ManyToManyRecords)</b>
+            <b>@Html.DisplayNameFor(model => model.ManyToManyGameInfos)</b>
         </div>
         <div class="col-10">
-            @Html.Raw(Model.ManyToManyRecords)
+            @Html.Raw(Model.ManyToManyGameInfos)
         </div>
     </div>
     *@
 
     <hr /> 
-    <a asp-action="Edit" asp-route-id="@Model.Record.Id">Edit</a>&nbsp;|&nbsp;
-    <a asp-action="Delete" asp-route-id="@Model.Record.Id">Delete</a>&nbsp;|&nbsp;
+    <a asp-action="Edit" asp-route-id="@Model.GameInfo.Id">Edit</a>&nbsp;|&nbsp;
+    <a asp-action="Delete" asp-route-id="@Model.GameInfo.Id">Delete</a>&nbsp;|&nbsp;
     <a asp-action="Index">Back to List</a>
 </div>
 }

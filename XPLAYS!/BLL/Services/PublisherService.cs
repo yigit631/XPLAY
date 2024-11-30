@@ -10,23 +10,23 @@ namespace BLL.Services
     public interface IPublisherService
     {
         IQueryable<PublisherModel> Query();
-        ServiceBase Create(Publisher record);
-        ServiceBase Update(Publisher record);
+        ServiceBase Create(Publisher GameInfo);
+        ServiceBase Update(Publisher GameInfo);
         ServiceBase Delete(int id);
     }
 
     public class PublisherService : ServiceBase, IPublisherService
     {
-        public PublisherService(Db db) : base(db)
+        public PublisherService(dataContext db) : base(db)
         {
         }
 
-        public ServiceBase Create(Publisher record)
+        public ServiceBase Create(Publisher GameInfo)
         {
-            if (_db.Publishers.Any(x => x.Name.ToUpper() == record.Name.ToUpper().Trim()))
+            if (_db.Publishers.Any(x => x.Name.ToUpper() == GameInfo.Name.ToUpper().Trim()))
                 return Error("Publisher with this name exists");
-            record.Name = record.Name?.Trim();
-            _db.Publishers.Add(record);
+            GameInfo.Name = GameInfo.Name?.Trim();
+            _db.Publishers.Add(GameInfo);
             _db.SaveChanges();
             return Success("Added successfully");
         }
@@ -46,23 +46,23 @@ namespace BLL.Services
 
         public IQueryable<PublisherModel> Query()
         {
-            return _db.Publishers.OrderBy(x => x.Name).Select(x => new PublisherModel() { Record = x });
+            return _db.Publishers.OrderBy(x => x.Name).Select(x => new PublisherModel() { GameInfo = x });
         }
 
-        public ServiceBase Update(Publisher record)
+        public ServiceBase Update(Publisher GameInfo)
         {
-            if (record == null)
-                return Error("Invalid publisher record.");
+            if (GameInfo == null)
+                return Error("Invalid publisher GameInfo.");
 
-            var existingPublisher = _db.Publishers.FirstOrDefault(x => x.Id == record.Id);
+            var existingPublisher = _db.Publishers.FirstOrDefault(x => x.Id == GameInfo.Id);
 
             if (existingPublisher == null)
                 return Error("Publisher not found.");
 
-            if (_db.Publishers.Any(x => x.Id != record.Id && x.Name.ToUpper() == record.Name.ToUpper().Trim()))
+            if (_db.Publishers.Any(x => x.Id != GameInfo.Id && x.Name.ToUpper() == GameInfo.Name.ToUpper().Trim()))
                 return Error("Another publisher with this name already exists.");
 
-            existingPublisher.Name = record.Name?.Trim();
+            existingPublisher.Name = GameInfo.Name?.Trim();
             _db.Entry(existingPublisher).State = EntityState.Modified;
             _db.SaveChanges();
 

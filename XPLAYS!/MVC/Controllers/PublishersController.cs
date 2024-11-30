@@ -13,20 +13,20 @@ namespace MVC.Controllers
         // Service injections:
         private readonly IPublisherService _publisherService;
 
-        /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
-        //private readonly IManyToManyRecordService _ManyToManyRecordService;
+        /* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. */
+        //private readonly IManyToManyGameInfoService _ManyToManyGameInfoService;
 
         public PublishersController(
 			IPublisherService publisherService
 
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
-           // , IManyToManyRecordService ManyToManyRecordService
+            /* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. */
+           // , IManyToManyGameInfoService ManyToManyGameInfoService
         )
         {
             _publisherService = publisherService;
 
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
-            //_ManyToManyRecordService = ManyToManyRecordService;
+            /* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. */
+            //_ManyToManyGameInfoService = ManyToManyGameInfoService;
         }
 
         // GET: Publishers
@@ -41,16 +41,16 @@ namespace MVC.Controllers
         public IActionResult Details(int id)
         {
             // Get item service logic:
-            var item = _publisherService.Query().SingleOrDefault(q => q.Record.Id == id);
+            var item = _publisherService.Query().SingleOrDefault(q => q.GameInfo.Id == id);
             return View(item);
         }
 
         protected void SetViewData()
         {
-            // Related items service logic to set ViewData (Record.Id and Name parameters may need to be changed in the SelectList constructor according to the model):
+            // Related items service logic to set ViewData (GameInfo.Id and Name parameters may need to be changed in the SelectList constructor according to the model):
             
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
-            //ViewBag.ManyToManyRecordIds = new MultiSelectList(_ManyToManyRecordService.Query().ToList(), "Record.Id", "Name");
+            /* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. */
+            //ViewBag.ManyToManyGameInfoIds = new MultiSelectList(_ManyToManyGameInfoService.Query().ToList(), "GameInfo.Id", "Name");
         }
 
         // GET: Publishers/Create
@@ -68,11 +68,11 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 // Insert item service logic:
-                var result = _publisherService.Create(publisher.Record);
+                var result = _publisherService.Create(publisher.GameInfo);
                 if (result.IsSuccessful)
                 {
                     TempData["Message"] = result.Message;
-                    return RedirectToAction(nameof(Details), new { id = publisher.Record.Id });
+                    return RedirectToAction(nameof(Details), new { id = publisher.GameInfo.Id });
                 }
                 ModelState.AddModelError("", result.Message);
             }
@@ -84,7 +84,7 @@ namespace MVC.Controllers
         public IActionResult Edit(int id)
         {
             // Get item to edit service logic:
-            var item = _publisherService.Query().SingleOrDefault(q => q.Record.Id == id);
+            var item = _publisherService.Query().SingleOrDefault(q => q.GameInfo.Id == id);
             SetViewData();
             return View(item);
         }
@@ -97,11 +97,11 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 // Update item service logic:
-                var result = _publisherService.Update(publisher.Record);
+                var result = _publisherService.Update(publisher.GameInfo);
                 if (result.IsSuccessful)
                 {
                     TempData["Message"] = result.Message;
-                    return RedirectToAction(nameof(Details), new { id = publisher.Record.Id });
+                    return RedirectToAction(nameof(Details), new { id = publisher.GameInfo.Id });
                 }
                 ModelState.AddModelError("", result.Message);
             }
@@ -113,7 +113,7 @@ namespace MVC.Controllers
         public IActionResult Delete(int id)
         {
             // Get item to delete service logic:
-            var item = _publisherService.Query().SingleOrDefault(q => q.Record.Id == id);
+            var item = _publisherService.Query().SingleOrDefault(q => q.GameInfo.Id == id);
             return View(item);
         }
 

@@ -70,10 +70,10 @@ foreach (var property in Model.ModelMetadata.Properties)
         @:<div class="row mb-3">
             @:<label asp-for="@(property.PropertyName.Remove(property.PropertyName.Length - 2))" class="col-2 col-form-label fw-bold"></label>
 			@:<div class="col-10">
-				@:<select asp-for="Record.@property.PropertyName" class="form-select" asp-items="ViewBag.@property.PropertyName">
+				@:<select asp-for="GameInfo.@property.PropertyName" class="form-select" asp-items="ViewBag.@property.PropertyName">
 					@:<option value="">-- Select --</option>
 				@:</select>
-				@:<span asp-validation-for="Record.@property.PropertyName" class="text-danger"></span>
+				@:<span asp-validation-for="GameInfo.@property.PropertyName" class="text-danger"></span>
 			@:</div>
         @:</div>
             continue;
@@ -83,7 +83,7 @@ foreach (var property in Model.ModelMetadata.Properties)
         @:<div class="row mb-3">
 			@:<label asp-for="@property.PropertyName" class="col-2 col-form-label fw-bold"></label>
 			@:<div class="col-10 pt-2">
-				@:<input class="form-check-input" asp-for="Record.@property.PropertyName" />
+				@:<input class="form-check-input" asp-for="GameInfo.@property.PropertyName" />
             @:</div>
         @:</div>
         }
@@ -92,11 +92,11 @@ foreach (var property in Model.ModelMetadata.Properties)
         @:<div class="row mb-3">
             @:<label asp-for="@property.PropertyName" class="col-2 col-form-label fw-bold"></label>
 			@:<div class="col-10">
-				@:<select asp-for="Record.@property.PropertyName" class="form-select">
+				@:<select asp-for="GameInfo.@property.PropertyName" class="form-select">
 					@:<option value="@@((int)Enum.Value1)">@@Enum.Value1</option>
 					@:<option value="@@((int)Enum.Value2)">@@Enum.Value2</option>
 				@:</select>
-				@:<span asp-validation-for="Record.@property.PropertyName" class="text-danger"></span>
+				@:<span asp-validation-for="GameInfo.@property.PropertyName" class="text-danger"></span>
 			@:</div>
         @:</div>
         }
@@ -106,8 +106,8 @@ foreach (var property in Model.ModelMetadata.Properties)
         @:<div class="row mb-3">
             @:<label asp-for="@property.PropertyName" class="col-2 col-form-label fw-bold"></label>
 			@:<div class="col-10">
-				@:<input asp-for="Record.@property.PropertyName" class="form-control @@dateTimePickerClass" type="text" />
-				@:<span asp-validation-for="Record.@property.PropertyName" class="text-danger"></span>
+				@:<input asp-for="GameInfo.@property.PropertyName" class="form-control @@dateTimePickerClass" type="text" />
+				@:<span asp-validation-for="GameInfo.@property.PropertyName" class="text-danger"></span>
 			@:</div>
         @:</div>
         }
@@ -116,21 +116,21 @@ foreach (var property in Model.ModelMetadata.Properties)
         @:<div class="row mb-3">
             @:<label asp-for="@property.PropertyName" class="col-2 col-form-label fw-bold"></label>
 			@:<div class="col-10">
-			    @:<input asp-for="Record.@property.PropertyName" class="form-control" />
-				@:<span asp-validation-for="Record.@property.PropertyName" class="text-danger"></span>
+			    @:<input asp-for="GameInfo.@property.PropertyName" class="form-control" />
+				@:<span asp-validation-for="GameInfo.@property.PropertyName" class="text-danger"></span>
 			@:</div>
         @:</div>
         }
     }
 }
 @:
-@:@@* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@@
+@:@@* Can be uncommented and used for many to many relationships. ManyToManyGameInfo may be replaced with the related entiy name in the controller and views. *@@
         @:@@*
         @:<div class="row mb-3">
-            @:<label asp-for="ManyToManyRecordIds" class="col-2 col-form-label fw-bold"></label>
+            @:<label asp-for="ManyToManyGameInfoIds" class="col-2 col-form-label fw-bold"></label>
 	        @:<div class="col-10">
-		        @:<select multiple asp-for="ManyToManyRecordIds" class="form-select" asp-items="ViewBag.ManyToManyRecordIds"></select>
-		        @:<span asp-validation-for="ManyToManyRecordIds" class="text-danger"></span>
+		        @:<select multiple asp-for="ManyToManyGameInfoIds" class="form-select" asp-items="ViewBag.ManyToManyGameInfoIds"></select>
+		        @:<span asp-validation-for="ManyToManyGameInfoIds" class="text-danger"></span>
 	        @:</div>
         @:</div>
         @:*@@

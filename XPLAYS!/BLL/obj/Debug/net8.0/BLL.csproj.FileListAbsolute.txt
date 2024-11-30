@@ -11,3 +11,16 @@ C:\Users\ygt\source\repos\XPLAYS!\BLL\obj\Debug\net8.0\BLL.dll
 C:\Users\ygt\source\repos\XPLAYS!\BLL\obj\Debug\net8.0\refint\BLL.dll
 C:\Users\ygt\source\repos\XPLAYS!\BLL\obj\Debug\net8.0\BLL.pdb
 C:\Users\ygt\source\repos\XPLAYS!\BLL\obj\Debug\net8.0\ref\BLL.dll
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.sourcelink.json
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.dll
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\refint\BLL.dll
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\BLL.pdb
+F:\Git\XPLAY\XPLAYS!\BLL\bin\Debug\net8.0\BLL.deps.json
+F:\Git\XPLAY\XPLAYS!\BLL\bin\Debug\net8.0\BLL.dll
+F:\Git\XPLAY\XPLAYS!\BLL\bin\Debug\net8.0\BLL.pdb
+F:\Git\XPLAY\XPLAYS!\BLL\obj\Debug\net8.0\ref\BLL.dll

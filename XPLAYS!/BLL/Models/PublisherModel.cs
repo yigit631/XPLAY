@@ -10,9 +10,9 @@ namespace BLL.Models
 {
     public class PublisherModel
     {
-        public DAL.Publisher Record { get; set; }
+        public DAL.Publisher GameInfo { get; set; }
 
-        public String Name => Record.Name;
+        public String Name => GameInfo.Name;
 
     }
 }
