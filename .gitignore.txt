@@ -1,0 +1,16 @@
+# Ignore bin and obj folders for specific projects
+BLL/bin/
+BLL/obj/
+MVC/bin/
+MVC/obj/
+
+# General Visual Studio and build artifacts
+.vs/
+*.user
+*.rsuser
+*.suo
+*.cache
+*.log
+*.pdb
+*.dll
+*.exe
